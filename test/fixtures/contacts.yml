@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  method: MyString
+  client_id: 1
+  gig_id: 1
+  notes: MyString
+  followup_date: MyString
+
+two:
+  date: MyString
+  method: MyString
+  client_id: 1
+  gig_id: 1
+  notes: MyString
+  followup_date: MyString
