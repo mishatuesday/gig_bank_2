@@ -1,3 +1,20 @@
+
+img {
+  max-width: 400px;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+a {
+  background-color: #3ac;
+  color: white;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin: 5px;
+}
+
 .App {
   text-align: center;
 }
@@ -5,12 +22,6 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,11 +39,66 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.band {
+  max-width: 400px;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+.band-items {
+  margin-bottom: 0px;
+}
+
+.band-image {
+  margin-top: 100px;
+  width: 100px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.headline-div {
+  height: 1200px;
+}
+
+.c-buttons {
+  margin-right: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-align {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.header-align {
+  display: flex;
+  float: left;
+  justify-content: center;
+  padding: 5px;
+  overflow: hidden;
+  width: 66%;
+}
+
+.menu-align {
+  display: flex;
+  justify-content: center;
+  float: left;
+  margin-top: 1px;
+}
+
+.logged-in {
+  font-size: 12px;
+}
+
+.login-align {
+  display: flex;
+  position: relative;
+  float: right;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.concession-header-align {
+  margin-top: 20px;
 }

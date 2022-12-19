@@ -1,8 +1,17 @@
 import './App.css'
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import NavHeader from './NavHeader'
+import Login from './Login'
 
 function App() {
+
+  const [loggedIn, setLoggedIn] = useState(localStorage.email ? true : false)
+  
+    function toggleLoggedIn() {
+        loggedIn ? setLoggedIn(false) : setLoggedIn(true)
+    }
+
   return (
     <BrowserRouter>
     <NavHeader />
