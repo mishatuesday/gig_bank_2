@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import { Input, Button, Icon } from 'semantic-ui-react'
+import {useState} from 'react'
+import { Input, Button, Icon, Message } from 'semantic-ui-react'
+
 
 function Login({toggleLoggedIn}) {
-
     const [formData, setFormData] = useState({email: "", password: ""})
 
     function onLogin() {
@@ -28,23 +28,31 @@ function Login({toggleLoggedIn}) {
         })
     }
 
+    function logout() {
+        fetch("http://localhost:3000/logout")
+        .then(setFormData({email: "", password: ""}))
+        localStorage.removeItem("email")
+        localStorage.removeItem("id")
+        toggleLoggedIn()
+    }
+
     return(
-        // localStorage.email ?
+        localStorage.email ?
         
-        // <div className='login-align'>
-        // <p>
-        //     <Message className="logged-in" compact>
-        //         logged in as <br />{localStorage.email}
-        //     </Message>
-        // <p>
-        //     <Button icon labelPosition='right' onClick={() => logout()}>
-        //         Logout
-        //         <Icon name='right arrow' />
-        //     </Button>
-        // </p>
-        // </p>
-        // </div>
-        // :
+        <div className='login-align'>
+        <p>
+            <Message className="logged-in" compact>
+                logged in as <br />{localStorage.email}
+            </Message>
+        <p>
+            <Button icon labelPosition='right' onClick={() => logout()}>
+                Logout
+                <Icon name='right arrow' />
+            </Button>
+        </p>
+        </p>
+        </div>
+        :
         <div className='login-align'>
             <p>
                 <b><small>{localStorage.error ? localStorage.error : null}</small></b><br />
@@ -60,7 +68,6 @@ function Login({toggleLoggedIn}) {
             </Button>
         </div>
     )
-
 }
 
 export default Login

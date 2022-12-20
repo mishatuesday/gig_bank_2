@@ -13,16 +13,16 @@ function NavHeader () {
         </Header.Content>
         </Header>
 
-
+            {/* conditional start here */}
+            {localStorage.email ?
+            <>
             <NavLink className="menu-item" to={`/calendar`}>
             Calendar
             </NavLink>
             <NavLink className="menu-item" to={`/to-do`}>
             To&nbsp;Do
             </NavLink> 
-            {/* conditional start here */}
-            {localStorage.email ?
-            <>
+            
             <NavLink className="menu-item" to={`/add-gig`}>
             Add&nbsp;Gig
             </NavLink>

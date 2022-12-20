@@ -2,7 +2,8 @@ import './App.css'
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import NavHeader from './NavHeader'
-import Login from './Login'
+import LoginStatus from './LoginStatus'
+import Calendar from './Calendar'
 
 function App() {
 
@@ -15,9 +16,9 @@ function App() {
   return (
     <BrowserRouter>
     <NavHeader />
-    <Login toggleLoggedIn={toggleLoggedIn} />
+    <LoginStatus toggleLoggedIn={toggleLoggedIn} />
     <Routes>
-      {/* <Route exact path="/" element={<ConcertList concerts={concerts} />} /> */}
+      <Route path="/calendar" element={<Calendar />} />
       {/* <Route path="/concessions" element={<ConcessionsList concessions = {concessions} deleteConcession = {deleteConcession} />} /> */}
       {/* <Route path="/concert/:id" element={<ShowConcert />} /> */}
      {/* <Route path="/newconcert" element={<NewConcertForm getConcerts={getConcerts} />} /> */}
