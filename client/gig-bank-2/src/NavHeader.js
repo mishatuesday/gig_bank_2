@@ -1,5 +1,5 @@
 import {NavLink} from 'react-router-dom'
-import { Header, Icon, Input, Menu, Segment } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
 
 
 function NavHeader () {
@@ -13,44 +13,27 @@ function NavHeader () {
         </Header.Content>
         </Header>
 
-            <Menu pointing>
-            <NavLink to={`/`}>
-            <Menu.Item
-                name='Calendar'
-                as='a'
-                
-            />
+
+            <NavLink className="menu-item" to={`/calendar`}>
+            Calendar
             </NavLink>
-            <NavLink to={`/concessions`}>
-            <Menu.Item
-                    name='To Do'
-                    as='a'
-            />
+            <NavLink className="menu-item" to={`/to-do`}>
+            To&nbsp;Do
             </NavLink> 
             {/* conditional start here */}
             {localStorage.email ?
             <>
-            <NavLink to={`/newband`}>
-            <Menu.Item
-                    name='Add Gig'
-                    as='a'
-            />
+            <NavLink className="menu-item" to={`/add-gig`}>
+            Add&nbsp;Gig
             </NavLink>
-            <NavLink to={`/newconcert`}>
-            <Menu.Item
-                    name='Add Client'
-                    as='a'
-            />
+            <NavLink className="menu-item" to={`/add-client`}>
+            Add&nbsp;Client
             </NavLink>
-            <NavLink to={`/newconcession`}>
-            <Menu.Item
-                    name='Invoices'
-                    as='a'
-            />
-            </NavLink>
+            {/* <NavLink className="menu-item" to={`/invoices`}>
+            Invoices
+            </NavLink> */}
             </>
             :null}
-            </Menu>
             </div>
         </div>
     )
