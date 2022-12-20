@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import NavHeader from './NavHeader'
 import LoginStatus from './LoginStatus'
 import Calendar from './Calendar'
+import ContactList from './ContactList';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <LoginStatus toggleLoggedIn={toggleLoggedIn} />
     <Routes>
       <Route path="/calendar" element={<Calendar />} />
+      <Route path="/to-do" element={<ContactList />} />
       {/* <Route path="/concessions" element={<ConcessionsList concessions = {concessions} deleteConcession = {deleteConcession} />} /> */}
       {/* <Route path="/concert/:id" element={<ShowConcert />} /> */}
      {/* <Route path="/newconcert" element={<NewConcertForm getConcerts={getConcerts} />} /> */}

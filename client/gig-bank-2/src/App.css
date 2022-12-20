@@ -1,9 +1,4 @@
 
-img {
-  max-width: 400px;
-  max-height: 200px;
-  border-radius: 20px;
-}
 
 a.menu-item {
   display: inline-block;
@@ -15,6 +10,16 @@ a.menu-item {
   border-color: black;
   margin: 5px;
   padding: 1px;
+}
+
+img {
+  max-width: 400px;
+  max-height: 200px;
+  border-radius: 20px;
+}
+
+td {
+  padding: 5px;
 }
 
 .App {
@@ -41,21 +46,8 @@ a.menu-item {
   color: #61dafb;
 }
 
-.band {
-  max-width: 400px;
-  max-height: 200px;
-  border-radius: 20px;
-}
-
-.band-items {
-  margin-bottom: 0px;
-}
-
-.band-image {
-  margin-top: 100px;
-  width: 100px;
-  height: 200px;
-  border-radius: 20px;
+.date {
+  text-align: center;
 }
 
 .headline-div {
@@ -68,9 +60,34 @@ a.menu-item {
   justify-content: center;
 }
 
+.calendar {
+  background-color: #3ac;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.calendar-2 {
+  background-color: gray;
+  color: white;
+  padding: 5px;
+}
+
 .card-align {
   margin-bottom: 25px;
   margin-top: 25px;
+}
+
+.day {
+  font-size: 24px;
+}
+
+.gig-agenda {
+  display: block;
+  position: relative;
+  clear: both;
+  margin-left: 50px;
 }
 
 .header-align {
@@ -87,6 +104,10 @@ a.menu-item {
   justify-content: center;
   float: left;
   margin-top: 1px;
+}
+
+.month {
+  font-size: 18px;
 }
 
 .logged-in {

@@ -14,7 +14,7 @@ function GigCalendar({loggedIn}) {
 
 
     return (
-        <div className="gigGrid">
+        <div className="gig-agenda">
             <h1>Gig Calendar</h1>
             <table>
                 <tbody>

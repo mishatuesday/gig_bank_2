@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   get '/my_gigs/:id', to: 'gigs#index_for_user'
+  get '/contacts/:id', to: 'contacts#index_for_user'
   # Defines the root path route ("/")
   # root "articles#index"
 end
