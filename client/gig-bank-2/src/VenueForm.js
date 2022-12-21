@@ -1,5 +1,23 @@
 
-// function VenueForm() {
+function VenueForm({venue, setVenue}) {
+
+    return (
+        <>
+        {
+            venue.id > 0 ?
+            <div>
+                Venue Info
+            </div>
+            :
+            <div>
+                <hr />
+                <label for="venue-search">Venue search</label>
+                <input name="venue-search" id="venue-search"></input> or <a href="">Add New</a>
+                <hr />
+            </div>
+        }
+        </>
+    )
 //     return (
 //         <>
 //             <label>Venue Name: </label>
@@ -16,6 +34,6 @@
 //             <input type="text" size="30" name="venue-phone" id="venue-phone" className="half" value={gigFormData["venue_phone"]} onChange={(e) => setGigFormData({...gigFormData, venue_phone: e.target.value})} ></input><hr />
 //         </>
 //     )
-// }
+}
 
-// export default VenueForm
+export default VenueForm

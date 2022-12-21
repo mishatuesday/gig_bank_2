@@ -1,17 +1,17 @@
 import GigForm from './GigForm'
-// import VenueForm from './VenueForm'
+import VenueForm from './VenueForm'
 import { useState } from 'react'
 
 function AddGig() {
-
-    const [formData, setFormData] = useState([])
+    const [client, setClient] = useState({})
+    const [venue, setVenue] = useState({})
 
     return (
         <div className="content-panel">
             <h1>Gig Details</h1>
             <p>client form</p>
-            {/* <VenueForm formData={formData} setFormData={setFormData} /> */}
-            <GigForm  formData={formData} setFormData={setFormData} />
+            <VenueForm venue={venue} setVenue={setVenue} />
+            <GigForm client_id={client.id} venue_id={venue.id} />
         </div>
     )
 }

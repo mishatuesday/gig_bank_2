@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react"
 
-function GigForm ({formData, setFormData}) {
+function GigForm () {
+
+    const [formData, setFormData] = useState([])
 
     return (
             <>
             <label>Event Date: </label>
-            <input type="text" name="date" id="date" className="half" value={formData["date"]} onChange={(e) => setFormData({...formData, date: e.target.value})} ></input>
+            <input type="text" placeholder="YYYY-MM-DD" name="date" id="date" className="half" value={formData["date"]} onChange={(e) => setFormData({...formData, date: e.target.value})} ></input><br />
             <label>Occasion: </label>
             <input type="text" name="occasion" id="occasion" value={formData["occasion"]} onChange={(e) => setFormData({...formData, occasion: e.target.value})} ></input><br />
-            <label>Event Setup Time: </label>
-            <input type="text" name="setup_time" id="setup_time" className="half" value={formData["setup_time"]} onChange={(e) => setFormData({...formData, setup_time: e.target.value})} ></input>
+            <label>Setup Time: </label>
+            <input type="text" name="setup_time" id="setup_time" className="half" value={formData["setup_time"]} onChange={(e) => setFormData({...formData, setup_time: e.target.value})} ></input><br />
             <label>Gig Start Time: </label>
-            <input type="text" name="service_time" id="service_time" className="half" value={formData["service_time"]} onChange={(e) => setFormData({...formData, service_time: e.target.value})} ></input>
+            <input type="text" name="service_time" id="service_time" className="half" value={formData["service_time"]} onChange={(e) => setFormData({...formData, service_time: e.target.value})} ></input><br />
             {/* <label>Gig Duration (minutes): </label>
             <input type="text" name="gig-duration" id="gig-duration" className="half" value={gigFormData["gig_duration"]} onChange={(e) => setGigFormData({...gigFormData, gig_duration: e.target.value})} ></input><hr /> */}
             <label>Service Notes: </label><br />
