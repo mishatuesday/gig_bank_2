@@ -5,6 +5,7 @@ import NavHeader from './NavHeader'
 import LoginStatus from './LoginStatus'
 import Calendar from './Calendar'
 import ContactList from './ContactList';
+import AddGig from './AddGig'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
     <Routes>
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/to-do" element={<ContactList />} />
-      {/* <Route path="/concessions" element={<ConcessionsList concessions = {concessions} deleteConcession = {deleteConcession} />} /> */}
+      <Route path="/add-gig" element={<AddGig />} />
       {/* <Route path="/concert/:id" element={<ShowConcert />} /> */}
      {/* <Route path="/newconcert" element={<NewConcertForm getConcerts={getConcerts} />} /> */}
       {/* <Route path="/newconcession" element={<NewConcessionForm onConcessionFormSubmit={onConcessionFormSubmit}/>} /> */}

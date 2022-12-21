@@ -69,7 +69,7 @@ td {
 }
 
 .calendar-2 {
-  background-color: gray;
+  background-color: #0a6;
   color: white;
   padding: 5px;
 }
@@ -83,7 +83,7 @@ td {
   font-size: 24px;
 }
 
-.gig-agenda {
+.content-panel {
   display: block;
   position: relative;
   clear: both;
@@ -104,6 +104,37 @@ td {
   justify-content: center;
   float: left;
   margin-top: 1px;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: #fff;
+}
+
+.modal-header, .modal-footer {
+  padding: 10px;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .month {
