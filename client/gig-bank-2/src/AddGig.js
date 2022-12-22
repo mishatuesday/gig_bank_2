@@ -3,8 +3,8 @@ import VenueForm from './VenueForm'
 import ClientForm from './ClientForm'
 import { useState } from 'react'
 
-function AddGig() {
-    const [client, setClient] = useState({})
+function AddGig({client, setClient}) {
+    
     const [venue, setVenue] = useState({})
 
     return (

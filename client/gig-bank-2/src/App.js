@@ -8,7 +8,7 @@ import ContactList from './ContactList';
 import AddGig from './AddGig'
 
 function App() {
-
+  const [client, setClient] = useState({})
   const [loggedIn, setLoggedIn] = useState(localStorage.email ? true : false)
   
     function toggleLoggedIn() {
@@ -22,7 +22,7 @@ function App() {
     <Routes>
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/to-do" element={<ContactList />} />
-      <Route path="/add-gig" element={<AddGig />} />
+      <Route path="/add-gig" element={<AddGig client={client} setClient={setClient} />} />
       {/* <Route path="/concert/:id" element={<ShowConcert />} /> */}
      {/* <Route path="/newconcert" element={<NewConcertForm getConcerts={getConcerts} />} /> */}
       {/* <Route path="/newconcession" element={<NewConcessionForm onConcessionFormSubmit={onConcessionFormSubmit}/>} /> */}

@@ -1,8 +1,21 @@
 import { useEffect, useState } from "react"
 
 function GigForm ({client_id, venue_id}) {
-
+    const gigUrl = "http://localhost:3000/gigs"
     const [formData, setFormData] = useState([])
+
+    function saveGig() {
+        const newGig = {...formData, client_id: client_id, venue_id: venue_id}
+        fetch(gigUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(newGig)
+        })
+        
+    }
 
     return (
             <>
@@ -24,8 +37,8 @@ function GigForm ({client_id, venue_id}) {
             <input type="text" size="30" name="deposit-paid" id="deposit-paid" className="half" value={gigFormData["deposit_paid"]} onChange={(e) => setGigFormData({...gigFormData, deposit_paid: e.target.value})} ></input><br />
             <label>Balance Paid: </label>
             <input type="text" size="30" name="balance-paid" id="balance-paid" className="half" value={gigFormData["balance_paid"]} onChange={(e) => setGigFormData({...gigFormData, balance_paid: e.target.value})} ></input><br />
-            <span id={status}>unsaved changes</span>
-            <input type="submit" value="Save Gig" className="button-save"></input> */}
+            <span id={status}>unsaved changes</span>*/}
+            <input type="submit" value="Save Gig" className="button-save" onClick={() => saveGig()}></input> 
             </>
     )
 }
