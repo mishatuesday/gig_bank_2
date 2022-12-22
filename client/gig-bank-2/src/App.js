@@ -8,6 +8,7 @@ import ContactList from './ContactList';
 import AddGig from './AddGig'
 import AddClient from './AddClient'
 import ShowGig from './ShowGig'
+import Splash from './Splash'
 
 function App() {
   const [client, setClient] = useState({})
@@ -17,11 +18,13 @@ function App() {
         loggedIn ? setLoggedIn(false) : setLoggedIn(true)
     }
 
+
   return (
     <BrowserRouter>
     <NavHeader />
     <LoginStatus toggleLoggedIn={toggleLoggedIn} />
     <Routes>
+      <Route exact path="/" element={<Splash />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/to-do" element={<ContactList />} />
       <Route path="/add-gig" element={<AddGig client={client} setClient={setClient} />} />

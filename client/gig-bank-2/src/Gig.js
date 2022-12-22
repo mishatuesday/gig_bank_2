@@ -17,7 +17,7 @@ function Gig ({ gig }) {
                         <span className={divClass}>{gig.services.slice(0,80)}...</span>
                     </td>
                     <td width="22%">
-                        <NavLink to={`/editgig/${gig.id}`}><button className="button-36">view/edit</button></NavLink>
+                        <NavLink to={`/gig/${gig.id}`}><button className="button-36">view</button></NavLink>
                     </td>
                 </tr>
     )

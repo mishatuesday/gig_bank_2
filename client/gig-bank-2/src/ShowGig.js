@@ -24,10 +24,13 @@ function ShowGig() {
                 {thisGig.venue ? 
                 `${thisGig.venue.city}, ${thisGig.venue.state}`
                 : null}
+            <div className="form-title">
+                contacts with client:
             </div>
             {thisGig.contacts ?
             thisGig.contacts.map(contact => <Contact key={contact.id} contact={contact} />)
             : null}
+            </div>
             <div>
                 <a href="#" onClick={() => setShowAdd(true)}>add contact</a>
                 <AddContact gig_id={thisGig.id} client_id={thisGig.client_id} showAdd={showAdd} setShowAdd={setShowAdd} />
