@@ -13,6 +13,7 @@ function ClientForm({client, setClient, className}) {
                 {client.first_name} {client.last_name}<br />
                 {client.company}<br />
                 {client.phone} {client.email}
+                <a href="#" onClick={() => setClient({})}>remove client</a>
             </div>
             :
             <>

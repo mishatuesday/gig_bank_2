@@ -12,8 +12,9 @@ function VenueForm({venue, setVenue}) {
                 venue<br />
                 {venue.name}<br />
                 {venue.street}<br />
-                {venue.city}, {venue.state} {venue.zip_code}
-                {venue.email} {venue.phone}
+                {venue.city}, {venue.state} {venue.zip_code}<br />
+                {venue.email} {venue.phone}<br />
+                <a href="#" onClick={() => setVenue({})}>remove venue</a>
             </div>
             :
             <div>

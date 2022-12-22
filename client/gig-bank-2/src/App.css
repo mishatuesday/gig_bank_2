@@ -18,6 +18,11 @@ img {
   border-radius: 20px;
 }
 
+input {
+  font-size: 10px;
+  margin: 2px;
+}
+
 td {
   padding: 5px;
 }
@@ -79,15 +84,23 @@ td {
   margin-top: 25px;
 }
 
-.day {
-  font-size: 24px;
-}
-
 .content-panel {
   display: block;
   position: relative;
   clear: both;
   margin-left: 50px;
+}
+
+.day {
+  font-size: 24px;
+}
+
+.form-title {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #3ac;
+  padding: 3px;
 }
 
 .header-align {
@@ -112,15 +125,18 @@ td {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.8);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .modal-content {
-  width: 500px;
+  max-width: 500px;
   background-color: #fff;
+  padding: 5px;
+  font-size: 12px;
 }
 
 .modal-header, .modal-footer {
