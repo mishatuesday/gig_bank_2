@@ -9,7 +9,11 @@ function VenueForm({venue, setVenue}) {
         {
             venue.id > 0 ?
             <div>
-                Venue Info
+                venue<br />
+                {venue.name}<br />
+                {venue.street}<br />
+                {venue.city}, {venue.state} {venue.zip_code}
+                {venue.email} {venue.phone}
             </div>
             :
             <div>
@@ -25,6 +29,7 @@ function VenueForm({venue, setVenue}) {
                 }
             </div>
         }
+        <hr />
         </>
     )
 //     return (

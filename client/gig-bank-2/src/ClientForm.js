@@ -9,7 +9,10 @@ function ClientForm({client, setClient}) {
         {
             client.id > 0 ?
             <div>
-                Anita Drake
+                client<br />
+                {client.first_name} {client.last_name}<br />
+                {client.company}<br />
+                {client.phone} {client.email}
             </div>
             :
             <>
@@ -23,6 +26,7 @@ function ClientForm({client, setClient}) {
             }
             </>
         }
+        <hr />
         </>
     )
 }
