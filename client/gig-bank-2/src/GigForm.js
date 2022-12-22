@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function GigForm () {
+function GigForm ({client_id, venue_id}) {
 
     const [formData, setFormData] = useState([])
 

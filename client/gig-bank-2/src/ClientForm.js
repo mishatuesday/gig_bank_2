@@ -8,14 +8,16 @@ function ClientForm({client, setClient}) {
         <>
         {
             client.id > 0 ?
-            <p>Anita Drake</p>
+            <div>
+                Anita Drake
+            </div>
             :
             <>
             {/* <label for="client_search">Client search</label>
             <input name="client_search" id="client_search"></input> or <a href="">Add New</a> */}
             {
                 showAddClient ?
-                <AddClient showAddClient={showAddClient} setShowAddClient={setShowAddClient} client={client} setClient={setClient} />
+                <AddClient setShowAddClient={setShowAddClient} setClient={setClient} />
                 :
                 <a href="#" onClick={() => setShowAddClient(true)}>Add Client</a>
             }

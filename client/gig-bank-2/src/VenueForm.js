@@ -1,5 +1,8 @@
+import { useState } from 'react'
+import AddVenue from './AddVenue'
 
 function VenueForm({venue, setVenue}) {
+    const [showAddVenue, setShowAddVenue] = useState(false)
 
     return (
         <>
@@ -10,10 +13,16 @@ function VenueForm({venue, setVenue}) {
             </div>
             :
             <div>
-                <hr />
+                {/* <hr />
                 <label for="venue-search">Venue search</label>
                 <input name="venue-search" id="venue-search"></input> or <a href="">Add New</a>
-                <hr />
+                <hr /> */}
+                {
+                    showAddVenue ?
+                    <AddVenue setShowAddVenue={setShowAddVenue} setVenue={setVenue} />
+                    :
+                    <a href="#" onClick={() => setShowAddVenue(true)}>Add Venue</a>
+                }
             </div>
         }
         </>

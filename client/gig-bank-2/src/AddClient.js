@@ -1,9 +1,9 @@
 
-function AddClient({setShowAddClient, client, setClient}) {
-    //not sure I need client
+function AddClient({setShowAddClient, setClient}) {
+    
     return (
         <>
-        <p>AddClient component</p>
+        <p>A Form to Enter a Client</p>
         <a href="#" onClick={() => setShowAddClient(false)}>cancel</a>
         </>
     )
