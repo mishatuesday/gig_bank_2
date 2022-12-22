@@ -19,7 +19,7 @@ function Contact ({ contact }) {
                         <span>{contact.notes.slice(0,240)}...</span>
                     </td>
                     <td>
-                        {/* <NavLink to={`/contacts/add/${contact.gig_id}/${contact.client_id}`}><button className="button-36">add followup</button></NavLink> */}
+                        {contact.followup_date > 0 ? contact.followup_date : null}
                     </td>
                 </tr>
     )
