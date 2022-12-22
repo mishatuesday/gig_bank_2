@@ -17,7 +17,7 @@ function ContactList({loggedIn}) {
         if (a.followup_date > b.followup_date) return 1;
         if (b.folowup_date > a.followup_date) return -1;
         return 0;
-      }
+    }
 
     return (
         <div className="content-panel">

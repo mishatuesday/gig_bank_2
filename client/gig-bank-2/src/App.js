@@ -25,11 +25,6 @@ function App() {
       <Route path="/to-do" element={<ContactList />} />
       <Route path="/add-gig" element={<AddGig client={client} setClient={setClient} />} />
       <Route path="/add-client" element={<AddClient setClient={setClient} className={"content-panel"} />} />
-     {/* <Route path="/newconcert" element={<NewConcertForm getConcerts={getConcerts} />} /> */}
-      {/* <Route path="/newconcession" element={<NewConcessionForm onConcessionFormSubmit={onConcessionFormSubmit}/>} /> */}
-      {/* <Route path="signup" element={<NewUserSignup />} /> */}
-      {/* <Route path='/concession/:id/EditForm' element={<EditConcessionForm onEditConcession={onEditConcession}/>}/> */}
-      {/* <Route path='/newband' element={<NewBandForm onBandFormSubmit={onBandFormSubmit} />}/> */}
     </Routes>
   </BrowserRouter>
   );
