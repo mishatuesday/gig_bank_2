@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import AddClient from './AddClient'
 
-function ClientForm({client, setClient}) {
+function ClientForm({client, setClient, className}) {
     const [showAddClient, setShowAddClient] = useState(false)
 
     return (
@@ -20,7 +20,7 @@ function ClientForm({client, setClient}) {
             <input name="client_search" id="client_search"></input> or <a href="">Add New</a> */}
             {
                 showAddClient ?
-                <AddClient setShowAddClient={setShowAddClient} setClient={setClient} />
+                <AddClient setShowAddClient={setShowAddClient} setClient={setClient} className={className} />
                 :
                 <a href="#" onClick={() => setShowAddClient(true)}>Add Client</a>
             }

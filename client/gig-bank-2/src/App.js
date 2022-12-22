@@ -6,6 +6,7 @@ import LoginStatus from './LoginStatus'
 import Calendar from './Calendar'
 import ContactList from './ContactList';
 import AddGig from './AddGig'
+import AddClient from './AddClient'
 
 function App() {
   const [client, setClient] = useState({})
@@ -23,7 +24,7 @@ function App() {
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/to-do" element={<ContactList />} />
       <Route path="/add-gig" element={<AddGig client={client} setClient={setClient} />} />
-      {/* <Route path="/concert/:id" element={<ShowConcert />} /> */}
+      <Route path="/add-client" element={<AddClient setClient={setClient} className={"content-panel"} />} />
      {/* <Route path="/newconcert" element={<NewConcertForm getConcerts={getConcerts} />} /> */}
       {/* <Route path="/newconcession" element={<NewConcessionForm onConcessionFormSubmit={onConcessionFormSubmit}/>} /> */}
       {/* <Route path="signup" element={<NewUserSignup />} /> */}

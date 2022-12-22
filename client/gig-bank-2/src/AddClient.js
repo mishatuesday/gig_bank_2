@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function AddClient({setShowAddClient, setClient}) {
+function AddClient({setShowAddClient, setClient, className}) {
     const clientUrl = "http://localhost:3000/clients"
     const [clientFormData, setClientFormData] = useState([])
 
@@ -23,7 +23,7 @@ function AddClient({setShowAddClient, setClient}) {
     }
 
     return (
-        <>
+        <div className={className}>
         <label>First Name: </label>
         <input type="text" name="first_name" id="first_name" className="half" value={clientFormData["first_name"]} onChange={(e) => setClientFormData({...clientFormData, first_name: e.target.value})} ></input><br />
         <label>Last Name: </label>
@@ -38,7 +38,7 @@ function AddClient({setShowAddClient, setClient}) {
         <input type="textarea" name="notes" id="notes" className="half" value={clientFormData["notes"]} onChange={(e) => setClientFormData({...clientFormData, notes: e.target.value})} ></input><br />
         <button onClick={() => submitClient()}>Save Client</button>
         <a href="#" onClick={() => setShowAddClient(false)}>cancel</a>
-        </>
+        </div>
     )
 }
 

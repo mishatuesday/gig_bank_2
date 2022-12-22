@@ -10,7 +10,7 @@ function AddGig({client, setClient}) {
     return (
         <div className="content-panel">
             <h1>Gig Details</h1>
-            <ClientForm client={client} setClient={setClient} />
+            <ClientForm client={client} setClient={setClient} className={"modal"} />
             <VenueForm venue={venue} setVenue={setVenue} />
             <GigForm client_id={client.id} venue_id={venue.id} />
         </div>
