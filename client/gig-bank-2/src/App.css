@@ -170,6 +170,10 @@ td {
   max-width: 33%;
 }
 
-.concession-header-align {
-  margin-top: 20px;
+.workorder-title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #3ac;
+  padding: 3px;
 }

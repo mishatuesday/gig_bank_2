@@ -4,7 +4,7 @@ class GigsController < ApplicationController
         render json: Gig.create(gig_params), status: :ok
     end
     def show
-        render json: Gig.find(params[:id]), include: [:contacts, :venue], status: :ok
+        render json: Gig.find(params[:id]), include: [:contacts, :venue, :client], status: :ok
     end
     def update
         gig = Gig.find(params[:id])
