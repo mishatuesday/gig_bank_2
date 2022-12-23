@@ -10,6 +10,22 @@ function ShowGig() {
     const [thisGig, setThisGig] = useState({})
     const [showAdd, setShowAdd] = useState(false)
 
+    function showVenue() {
+        if (thisGig.venue) {
+            // return (thisGig.venue.name+" "+thisGig.venue.street+" "+thisGig.venue.city)
+            return (
+                <div>
+                    {thisGig.venue.name}<br />
+                    {thisGig.venue.street}<br />
+                    {thisGig.venue.city}, {thisGig.venue.state} {thisGig.venue.zip_code}<br />
+                    {thisGig.venue.phone}
+                </div>
+            )
+        } else {
+            return "TBD"
+        }
+    }
+
     
     useEffect(() => {
     fetch(`${showGigUrl}${id["id"]}`)
@@ -17,16 +33,19 @@ function ShowGig() {
     .then(setThisGig)
     }, [])
 
-    console.log(thisGig.client)
+    if (!thisGig.client) {
+        return null
+    } else {
+
 
     return (
         <div className="content-panel">
             <div className="workorder-title">
                 {thisGig.date} @ {thisGig.service_time}<br />
-                {thisGig.occasion} in {}
+                {thisGig.occasion}
                 {thisGig.venue ? 
-                `${thisGig.venue.city}, ${thisGig.venue.state}`
-                : <span>needs venue</span>}
+                `in ${thisGig.venue.city}, ${thisGig.venue.state}`
+                : <span> *needs venue*</span>}
                 </div>
                 <div>
                 <br />client:<br />
@@ -34,10 +53,7 @@ function ShowGig() {
                 </div>
                 <div>
                 <br />venue:<br />
-                {thisGig.venue.name}<br />
-                {thisGig.venue.street}<br />
-                {thisGig.venue.city}, {thisGig.venue.state} {thisGig.venue.zip_code}<br />
-                {thisGig.venue.phone}
+                {showVenue()}<br /><br />
                 </div>
                 <div>
                     Setup Time: {thisGig.setup_time}<br />
@@ -60,7 +76,7 @@ function ShowGig() {
                     <AddContact gig_id={thisGig.id} client_id={thisGig.client_id} showAdd={showAdd} setShowAdd={setShowAdd} />
                 </div>
             </div>
-            )
+            )}
 }
 
 export default ShowGig
