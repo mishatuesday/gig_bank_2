@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { Input, Button, Icon } from 'semantic-ui-react'
+import { useNavigate } from "react-router-dom";
 
 function Login({toggleLoggedIn}) {
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({email: "", password: ""})
 
@@ -25,6 +27,7 @@ function Login({toggleLoggedIn}) {
             }
             setFormData({email: "", password: ""})
             toggleLoggedIn()
+            navigate("/calendar")
         })
     }
 
