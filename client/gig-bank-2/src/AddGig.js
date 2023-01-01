@@ -12,7 +12,7 @@ function AddGig({client, setClient}) {
             <h1>Gig Details</h1>
             <ClientForm client={client} setClient={setClient} className={"modal"} />
             <VenueForm venue={venue} setVenue={setVenue} />
-            <GigForm client_id={client.id} venue_id={venue.id} />
+            <GigForm client_id={client.id} setClient={setClient} venue_id={venue.id} />
         </div>
     )
 }

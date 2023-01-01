@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from 'react-router-dom'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
-function GigForm ({client_id, venue_id}) {
+function GigForm ({client_id, venue_id, setClient}) {
     const gigUrl = "http://localhost:3000/gigs"
     const [formData, setFormData] = useState([])
+    const navigate = useNavigate()
 
     function saveGig() {
         const newGig = {...formData, client_id: client_id, venue_id: venue_id}
@@ -14,13 +18,19 @@ function GigForm ({client_id, venue_id}) {
             },
             body: JSON.stringify(newGig)
         })
-        
+        .then(() => {
+                setClient({});
+                setFormData([]);
+                navigate('/calendar');
+            } 
+            )
     }
 
     return (
             <>
-            <label>Event Date: </label>
-            <input type="text" placeholder="YYYY-MM-DD" name="date" id="date" className="half" value={formData["date"]} onChange={(e) => setFormData({...formData, date: e.target.value})} ></input><br />
+            <label>Event Date:</label>
+            <DatePicker selected={formData["date"]} onChange={(date) => setFormData({...formData, date: date})} />
+            
             <label>Occasion: </label>
             <input type="text" name="occasion" id="occasion" value={formData["occasion"]} onChange={(e) => setFormData({...formData, occasion: e.target.value})} ></input><br />
             <label>Setup Time: </label>

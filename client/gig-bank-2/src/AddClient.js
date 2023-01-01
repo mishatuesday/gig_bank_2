@@ -31,6 +31,9 @@ function AddClient({setShowAddClient, setClient, className}) {
         <div className={className}>
             <div className={modalClass}>
                 <div className="form-title">add client:</div>
+                
+                <label>First Name:</label>
+                <input type="text" name="first_name" id="first_name" className="half" value={clientFormData["first_name"]} onChange={(e) => setClientFormData({...clientFormData, first_name: e.target.value})}></input><br />
                 <label>First Name: </label>
                 <input type="text" name="first_name" id="first_name" className="half" value={clientFormData["first_name"]} onChange={(e) => setClientFormData({...clientFormData, first_name: e.target.value})} ></input><br />
                 <label>Last Name: </label>
@@ -44,7 +47,8 @@ function AddClient({setShowAddClient, setClient, className}) {
                 <label>Notes: </label>
                 <input type="textarea" name="notes" id="notes" className="half" value={clientFormData["notes"]} onChange={(e) => setClientFormData({...clientFormData, notes: e.target.value})} ></input><br />
                 <button onClick={() => submitClient()}>Save Client</button>
-                <a href="#" onClick={() => setShowAddClient(false)}>cancel</a>
+                <button onClick={() => setShowAddClient(false)}>cancel</button>
+                
             </div>
         </div>
     )
