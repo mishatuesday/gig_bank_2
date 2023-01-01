@@ -1,7 +1,12 @@
 class GigsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :not_found_response
     def create
-        render json: Gig.create(gig_params), status: :ok
+        gig = Gig.new(gig_params)
+        if gig.save
+            render json: gig, status: :ok
+        else
+            render json: {errors: gig.errors}, status: :unprocessable_entity
+        end
     end
     def show
         render json: Gig.find(params[:id]), include: [:contacts, :venue, :client], status: :ok

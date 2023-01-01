@@ -26,8 +26,8 @@ function NavHeader () {
             <NavLink className="menu-item" to={`/add-gig`}>
             Add&nbsp;Gig
             </NavLink>
-            <NavLink className="menu-item" to={`/add-client`}>
-            Add&nbsp;Client
+            <NavLink className="menu-item" to={`/clients`}>
+            Clients
             </NavLink>
             {/* <NavLink className="menu-item" to={`/invoices`}>
             Invoices
