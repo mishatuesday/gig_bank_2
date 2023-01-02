@@ -129,6 +129,20 @@ td {
   width: 66%;
 }
 
+
+.logged-in {
+  font-size: 12px;
+}
+
+.login-align {
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  float: right;
+  padding: 15px;
+  max-width: 33%;
+}
+
 .menu-align {
   display: flex;
   justify-content: center;
@@ -172,19 +186,6 @@ td {
 
 .month {
   font-size: 18px;
-}
-
-.logged-in {
-  font-size: 12px;
-}
-
-.login-align {
-  display: flex;
-  position: relative;
-  float: right;
-  overflow: hidden;
-  padding: 5px;
-  max-width: 33%;
 }
 
 .workorder-title {

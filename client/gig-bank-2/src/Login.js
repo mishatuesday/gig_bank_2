@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Input, Button, Icon } from 'semantic-ui-react'
 import { useNavigate } from "react-router-dom";
 
 function Login({toggleLoggedIn}) {
@@ -32,35 +31,13 @@ function Login({toggleLoggedIn}) {
     }
 
     return(
-        // localStorage.email ?
-        
-        // <div className='login-align'>
-        // <p>
-        //     <Message className="logged-in" compact>
-        //         logged in as <br />{localStorage.email}
-        //     </Message>
-        // <p>
-        //     <Button icon labelPosition='right' onClick={() => logout()}>
-        //         Logout
-        //         <Icon name='right arrow' />
-        //     </Button>
-        // </p>
-        // </p>
-        // </div>
-        // :
         <div className='login-align'>
-            <p>
                 <b><small>{localStorage.error ? localStorage.error : null}</small></b><br />
-                <Input icon='users' iconPosition='left' placeholder='Input Username...' type='text' name='email' id='email' value={formData["email"]} onChange={(e) => setFormData({...formData, email: e.target.value})} />
-            </p>
-            <p>
-                <Input icon='lock' iconPosition='left' placeholder='Input Password...' type="password" name="password" id="password" value={formData["password"]} onChange={(e) => setFormData({...formData, password: e.target.value})} />
-
-            </p>
-            <Button icon labelPosition='right' onClick={() => onLogin()}>
+                <input icon='users' iconPosition='left' placeholder='username' type='text' name='email' id='email' value={formData["email"]} onChange={(e) => setFormData({...formData, email: e.target.value})}></input>
+                <input icon='lock' iconPosition='left' placeholder='password' type="password" name="password" id="password" value={formData["password"]} onChange={(e) => setFormData({...formData, password: e.target.value})}></input>
+            <button icon labelPosition='right' onClick={() => onLogin()}>
                 Login
-                <Icon name='right arrow' />
-            </Button>
+            </button>
         </div>
     )
 
