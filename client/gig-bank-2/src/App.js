@@ -31,7 +31,7 @@ function App() {
       <Route path="/add-gig" element={<AddGig client={client} setClient={setClient} />} />
       <Route path="/add-client" element={<AddClient setClient={setClient} className={"content-panel"} />} />
       <Route path="/gig/:id" element={<ShowGig />} />
-      <Route path="/clients" element={<ClientList />} />
+      <Route path="/clients" element={<ClientList setClient={setClient} />} />
     </Routes>
   </BrowserRouter>
   );

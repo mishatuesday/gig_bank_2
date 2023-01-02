@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import Client from './Client'
 
-function ClientList() {
+function ClientList({setClient}) {
     const clientsUrl = 'http://localhost:3000/my_clients/'
     const [clients, setClients] = useState([])
     const navigate = useNavigate
@@ -13,7 +13,6 @@ function ClientList() {
         .then(setClients)
     }, [])
 
-    console.log(clients)
 
     return (<div className="content-panel">
         <h1>Client List!</h1>
@@ -24,7 +23,7 @@ function ClientList() {
         <div>
             {/* put the list of clients here */}
             <table>
-                    {clients.length > 0 ? clients.map(client => <Client key={client.id} client={client} />) : null}
+                    {clients.length > 0 ? clients.map(client => <Client key={client.id} client={client} setClient={setClient} />) : null}
             </table>
         </div>
         </div>)

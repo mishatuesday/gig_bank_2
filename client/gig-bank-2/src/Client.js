@@ -1,13 +1,19 @@
+import { useNavigate } from 'react-router-dom'
 
+function Client({client, setClient}) {
+    const navigate = useNavigate()
+    function createGig() {
+        setClient(client)
+        navigate("/add-gig")
+    }
 
-function Client({client}) {
     return (<>
             <tr className="client">
                 <td>
                     {client.first_name} {client.last_name}, {client.company} 
                 </td>
                 <td>
-                    <button>Create Gig</button>
+                    <button onClick={() => createGig()}>Create Gig</button>
                 </td>
                 {/* there should be a button for see all contacts, or it do that when click on div */}
             </tr>
