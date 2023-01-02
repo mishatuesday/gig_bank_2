@@ -19,7 +19,7 @@ class GigsController < ApplicationController
 
     def index_for_user
         user = User.find(params[:id])
-        render json: user.gigs, status: :ok
+        render json: user.gigs, include: [:venue], status: :ok
     end
 
     private

@@ -5,6 +5,7 @@ import Client from './Client'
 function ClientList({setClient}) {
     const clientsUrl = 'http://localhost:3000/my_clients/'
     const [clients, setClients] = useState([])
+    const [search, setSearch] = useState("")
     const navigate = useNavigate
 
     useEffect(() => {
@@ -12,10 +13,11 @@ function ClientList({setClient}) {
         .then(resp => resp.json())
         .then(setClients)
     }, [])
-
+    const showClients = clients.filter(client => client.first_name.toLowerCase().includes(search.toLowerCase()) || client.last_name.toLowerCase().includes(search.toLowerCase()))
 
     return (<div className="content-panel">
         <h1>Client List!</h1>
+        search: <input type="text" name="search" id="search" value={search} onChange={(e) => setSearch(e.target.value)}></input><br />
         <button onClick={() => navigate("/add-client")}>Add New Client</button>
         <div className="form-title">
             Clients:
@@ -23,7 +25,7 @@ function ClientList({setClient}) {
         <div>
             {/* put the list of clients here */}
             <table>
-                    {clients.length > 0 ? clients.map(client => <Client key={client.id} client={client} setClient={setClient} />) : null}
+                    {showClients.length > 0 ? showClients.map(client => <Client key={client.id} client={client} setClient={setClient} />) : null}
             </table>
         </div>
         </div>)

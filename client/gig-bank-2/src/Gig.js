@@ -5,16 +5,14 @@ function Gig ({ gig }) {
     const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG',
         'SEP', 'OCT', 'NOV', 'DEC']
     const monthName = months[gig.date.substr(5,2)-1]
-
-    
     const divClass = gig.deposit_paid > 0 ? "confirmed" : "unconfirmed"
 
     return (
                 <tr className="gig-row">
                     <td className="calendar" width="8%"><span className="month">{monthName}</span><br />
                     <span className="day">{day}</span></td>
-                    <td width="70%"><span className={divClass}>{gig.date.substr(0,10)} {gig.gig_start} : {gig.venue_city}, {gig.venue_state}</span><br />
-                        <span className={divClass}>{gig.services.slice(0,80)}...</span>
+                    <td width="70%"><span className={divClass}>{gig.service_time} : {gig.venue ? gig.venue.city : "Venue"}, {gig.venue ? gig.venue.state : "TBD"}</span><br />
+                        <span className={divClass}>{gig.services.slice(0,25)}{gig.services.length > 25 ? "..." : null}</span>
                     </td>
                     <td width="22%">
                         <NavLink to={`/gig/${gig.id}`}><button className="button-36">view</button></NavLink>
