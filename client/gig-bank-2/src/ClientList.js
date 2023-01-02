@@ -6,7 +6,7 @@ function ClientList({setClient}) {
     const clientsUrl = 'http://localhost:3000/my_clients/'
     const [clients, setClients] = useState([])
     const [search, setSearch] = useState("")
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch(`${clientsUrl}${localStorage.id}`)

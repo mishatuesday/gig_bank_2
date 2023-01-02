@@ -9,7 +9,7 @@ function ContactList({loggedIn}) {
     useEffect(() => {
         fetch(`${contactsUrl}${localStorage.id}`)
         .then(resp => resp.json())
-        .then(setContacts)
+        .then(r => setContacts(r.filter(contact => contact.followup_date !== "0")))
     }, [])
 
     // compare function helps sort contact objects by date

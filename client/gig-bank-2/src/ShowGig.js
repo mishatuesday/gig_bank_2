@@ -41,8 +41,8 @@ function ShowGig() {
     return (
         <div className="content-panel">
             <div className="workorder-title">
-                {thisGig.date} @ {thisGig.service_time}<br />
-                {thisGig.occasion}
+                {thisGig.date.substr(0,10)} @ {thisGig.service_time}<br />
+                {thisGig.occasion}&nbsp;
                 {thisGig.venue ? 
                 `in ${thisGig.venue.city}, ${thisGig.venue.state}`
                 : <span> *needs venue*</span>}
