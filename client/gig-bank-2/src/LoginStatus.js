@@ -17,21 +17,18 @@ function LoginStatus({toggleLoggedIn}) {
     return(
         localStorage.email ?
         
-        <div className='login-align'>
-        <p>
-            <Message className="logged-in" compact>
+        <div className="login-align">
+            <Message compact>
                 logged in as <br />{localStorage.email}
             </Message>
-        <p>
             <Button icon labelPosition='right' onClick={() => logout()}>
                 Logout
-                <Icon name='right arrow' />
             </Button>
-        </p>
-        </p>
         </div>
         :
+        <div className="logged-in">
         <Login toggleLoggedIn={toggleLoggedIn} />
+        </div>
     )
 }
 

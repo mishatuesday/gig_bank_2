@@ -10,6 +10,7 @@ import AddClient from './AddClient'
 import ShowGig from './ShowGig'
 import Splash from './Splash'
 import ClientList from './ClientList'
+import HeadComponent from './HeadComponent'
 
 function App() {
   const [client, setClient] = useState({})
@@ -22,8 +23,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <NavHeader />
-    <LoginStatus toggleLoggedIn={toggleLoggedIn} />
+      <HeadComponent toggleLoggedIn={toggleLoggedIn}/>
     <Routes>
       <Route exact path="/" element={<Splash />} />
       <Route path="/calendar" element={<Calendar />} />
