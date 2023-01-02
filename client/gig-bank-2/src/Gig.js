@@ -13,7 +13,7 @@ function Gig ({ gig }) {
                 <tr className="gig-row">
                     <td className="calendar" width="8%"><span className="month">{monthName}</span><br />
                     <span className="day">{day}</span></td>
-                    <td width="70%"><span className={divClass}>{gig.date} {gig.gig_start} : {gig.venue_city}, {gig.venue_state}</span><br />
+                    <td width="70%"><span className={divClass}>{gig.date.substr(0,10)} {gig.gig_start} : {gig.venue_city}, {gig.venue_state}</span><br />
                         <span className={divClass}>{gig.services.slice(0,80)}...</span>
                     </td>
                     <td width="22%">
