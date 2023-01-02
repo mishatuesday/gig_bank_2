@@ -13,6 +13,9 @@ a.menu-item {
 }
 
 button {
+  color: white;
+  background-color: #069;
+  border: none;
   display: inline-flex;
   height: 12px;
   font-size: 9px;
@@ -121,7 +124,7 @@ td {
 }
 
 .gig-row:hover {
-  background-color: #0a6;
+  background-color: #dfe;
 }
 
 .header-align {

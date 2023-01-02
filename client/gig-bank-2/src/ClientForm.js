@@ -9,7 +9,7 @@ function ClientForm({client, setClient, className}) {
         {
             client.id > 0 ?
             <div>
-                client<br />
+                <span className="form-title">client</span><br />
                 {client.first_name} {client.last_name}<br />
                 {client.company}<br />
                 {client.phone} {client.email}

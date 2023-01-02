@@ -48,7 +48,7 @@ function GigForm ({client_id, venue_id, setClient}) {
             <label>Balance Paid: </label>
             <input type="text" size="30" name="balance-paid" id="balance-paid" className="half" value={gigFormData["balance_paid"]} onChange={(e) => setGigFormData({...gigFormData, balance_paid: e.target.value})} ></input><br />
             <span id={status}>unsaved changes</span>*/}
-            <input type="submit" value="Save Gig" className="button-save" onClick={() => saveGig()}></input> 
+            <button onClick={() => saveGig()}>Save Gig</button> 
             </>
     )
 }
