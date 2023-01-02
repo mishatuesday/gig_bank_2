@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/my_gigs/:id', to: 'gigs#index_for_user'
   get '/contacts/:id', to: 'contacts#index_for_user'
+  get '/my_clients/:id', to: 'clients#index_for_user'
   # Defines the root path route ("/")
   # root "articles#index"
 end
