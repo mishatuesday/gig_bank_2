@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 // import { useState } from 'react'
 
 
-function Contact ({ contact }) {
+function Contact ({ contact, contacts, setContacts }) {
     // const [,updateState] = useState()
     const navigate = useNavigate()
     const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG',
@@ -27,6 +27,7 @@ function Contact ({ contact }) {
             body: JSON.stringify({followup_date: "0"})
         })
         // update front end contact followup date (use map) if not id, return
+        setContacts(contacts.filter(c => c.id !== contact.id))
     }
 
     return (

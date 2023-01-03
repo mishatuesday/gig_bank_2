@@ -2,9 +2,9 @@ import {useState, useEffect} from 'react'
 import Contact from './Contact'
 
 
-function ContactList({loggedIn}) {
+function ContactList({loggedIn, contacts, setContacts}) {
     const contactsUrl = 'http://localhost:3000/contacts/'
-    const [contacts, setContacts] = useState([])
+    // const [contacts, setContacts] = useState([]) // moved to App
 
     useEffect(() => {
         fetch(`${contactsUrl}${localStorage.id}`)
@@ -24,7 +24,7 @@ function ContactList({loggedIn}) {
             <h1>To Do</h1>
             <table>
                 <tbody>
-                {contacts.length > 0 ? contacts.sort(compare).map(contact => <Contact key={contact.id} contact={contact} />) : "looks like you're all caught up!"}
+                {contacts.length > 0 ? contacts.sort(compare).map(contact => <Contact key={contact.id} contact={contact} contacts={contacts} setContacts={setContacts} />) : "looks like you're all caught up!"}
                 </tbody>
             </table>
         </div>

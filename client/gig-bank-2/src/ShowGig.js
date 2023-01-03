@@ -5,7 +5,7 @@ import AddContact from './AddContact'
 
 const showGigUrl="http://localhost:3000/gigs/"
 
-function ShowGig() {
+function ShowGig({contacts, setContacts}) {
     const id = useParams()
     const [thisGig, setThisGig] = useState({})
     const [showAdd, setShowAdd] = useState(false)
@@ -68,7 +68,7 @@ function ShowGig() {
                 </div>
                 <div>
                     {thisGig.contacts ?
-                    thisGig.contacts.map(contact => <Contact key={contact.id} contact={contact} />)
+                    thisGig.contacts.map(contact => <Contact key={contact.id} contact={contact} contacts={contacts} setContacts={setContacts} />)
                     : null}
                 </div>
                 <div>
