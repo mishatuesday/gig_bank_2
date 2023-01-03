@@ -10,7 +10,7 @@ function Client({client, setClient}) {
     return (<>
             <tr className="client">
                 <td>
-                    {client.first_name} {client.last_name}, {client.company} 
+                    {client.first_name} {client.last_name}{client.company ? `, ${client.company}` : null} 
                 </td>
                 <td>
                     <button onClick={() => createGig()}>Create Gig</button>
