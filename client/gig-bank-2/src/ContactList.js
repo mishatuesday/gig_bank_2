@@ -24,7 +24,7 @@ function ContactList({loggedIn}) {
             <h1>To Do</h1>
             <table>
                 <tbody>
-                {contacts.length > 0 ? contacts.sort(compare).map(contact => <Contact key={contact.id} contact={contact} />) : "loading..."}
+                {contacts.length > 0 ? contacts.sort(compare).map(contact => <Contact key={contact.id} contact={contact} />) : "looks like you're all caught up!"}
                 </tbody>
             </table>
         </div>

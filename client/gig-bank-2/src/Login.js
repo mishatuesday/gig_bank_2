@@ -26,15 +26,15 @@ function Login({toggleLoggedIn}) {
             }
             setFormData({email: "", password: ""})
             toggleLoggedIn()
-            navigate("/calendar")
+            if (!localStorage.error) navigate("/calendar")
         })
     }
 
     return(
-        <div className='login-align'>
+        <div>
                 <b><small>{localStorage.error ? localStorage.error : null}</small></b><br />
-                <input icon='users' iconPosition='left' placeholder='username' type='text' name='email' id='email' value={formData["email"]} onChange={(e) => setFormData({...formData, email: e.target.value})}></input>
-                <input icon='lock' iconPosition='left' placeholder='password' type="password" name="password" id="password" value={formData["password"]} onChange={(e) => setFormData({...formData, password: e.target.value})}></input>
+                <input icon='users' iconPosition='left' placeholder='username' type='text' name='email' id='email' value={formData["email"]} onChange={(e) => setFormData({...formData, email: e.target.value})}></input><br />
+                <input icon='lock' iconPosition='left' placeholder='password' type="password" name="password" id="password" value={formData["password"]} onChange={(e) => setFormData({...formData, password: e.target.value})}></input><br />
             <button icon labelPosition='right' onClick={() => onLogin()}>
                 Login
             </button>

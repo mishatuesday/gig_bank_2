@@ -33,9 +33,9 @@ function Splash() {
                 <label>Email: </label>
                 <input type="text" name="email" id="email" value={userFormData.email} onChange={(e) => setUserFormData({...userFormData, email: e.target.value})} ></input><br />
                 <label>Password: </label>
-                <input type="text" name="password" id="password" value={userFormData.password} onChange={(e) => setUserFormData({...userFormData, password: e.target.value})} ></input><br />
+                <input type="password" name="password" id="password" value={userFormData.password} onChange={(e) => setUserFormData({...userFormData, password: e.target.value})} ></input><br />
                 <label>Confirm Password: </label>
-                <input type="text" name="passwd_conf" id="passwd_conf" value={userFormData.passwd_conf} onChange={(e) => setUserFormData({...userFormData, passwd_conf: e.target.value})} ></input><br />
+                <input type="password" name="passwd_conf" id="passwd_conf" value={userFormData.passwd_conf} onChange={(e) => setUserFormData({...userFormData, passwd_conf: e.target.value})} ></input><br />
                 <button onClick={() => submitUser()}>Sign Up!</button>
                 <a href="#" onClick={() => setShowCreate(false)} >cancel</a>
             </div>
@@ -43,6 +43,7 @@ function Splash() {
         
         :
         <div>
+            <img src={require("./assets/gigbank-splashy.png")} alt="a musician and a magician with money raining down on them" /><br />
             Welcome to GigBank! Log in or <a href="#" onClick={() => setShowCreate(true)} >Sign Up!</a>
         </div>
         }

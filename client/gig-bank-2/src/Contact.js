@@ -1,7 +1,9 @@
 import { NavLink, useNavigate } from 'react-router-dom'
+// import { useState } from 'react'
 
 
 function Contact ({ contact }) {
+    // const [,updateState] = useState()
     const navigate = useNavigate()
     const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG',
         'SEP', 'OCT', 'NOV', 'DEC']

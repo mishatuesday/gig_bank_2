@@ -23,7 +23,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <HeadComponent toggleLoggedIn={toggleLoggedIn}/>
+      <HeadComponent className="blurf" toggleLoggedIn={toggleLoggedIn}/>
     <Routes>
       <Route exact path="/" element={<Splash />} />
       <Route path="/calendar" element={<Calendar />} />

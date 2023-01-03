@@ -17,7 +17,7 @@ button {
   background-color: #069;
   border: none;
   display: inline-flex;
-  height: 12px;
+  height: 14px;
   font-size: 9px;
   justify-content: center;
   align-items: center;
@@ -108,7 +108,9 @@ td {
   display: block;
   position: relative;
   clear: both;
-  margin-left: 50px;
+  margin: auto;
+  width: 60%;
+  padding-top: 50px;
 }
 
 .day {
@@ -128,8 +130,9 @@ td {
 }
 
 .blurf {
-  background-image: url('./assets/gold-coins.jpg');
+  background-image: url('./assets/gold-coins.png');
   background-color: black;
+  display: flex;
 }
 
 .header-align {
@@ -144,12 +147,12 @@ td {
   padding: 5px;
   overflow: hidden;
   width: 60%;
-  background-image: url('./assets/gold-coins.jpg');
 }
 
 .logged-in {
   font-size: 12px;
-
+  width: 30%;
+  padding: 15px;
 }
 
 .login-align {
@@ -159,7 +162,6 @@ td {
   float: right;
   padding: 15px;
   width: 30%;
-  background-image: url('./assets/gold-coins.jpg');
 }
 
 .menu-align {
@@ -205,6 +207,12 @@ td {
 
 .month {
   font-size: 18px;
+}
+
+.user-email {
+  color: white;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.4);
 }
 
 .workorder-title {

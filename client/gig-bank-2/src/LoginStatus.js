@@ -1,5 +1,4 @@
 
-import { Button, Icon, Message } from 'semantic-ui-react'
 import Login from './Login'
 import { useNavigate } from "react-router-dom";
 
@@ -17,14 +16,14 @@ function LoginStatus({toggleLoggedIn}) {
     return(
         localStorage.email ?
         
-        <div className="login-align">
-            <Message compact>
-                logged in as <br />{localStorage.email}
-            </Message>
-            <Button icon labelPosition='right' onClick={() => logout()}>
+        <>
+            <div className="user-email">
+                logged in as <br />{localStorage.email}<br />
+            <button labelPosition='right' onClick={() => logout()}>
                 Logout
-            </Button>
-        </div>
+            </button>
+            </div>
+        </>
         :
         <div className="logged-in">
         <Login toggleLoggedIn={toggleLoggedIn} />
