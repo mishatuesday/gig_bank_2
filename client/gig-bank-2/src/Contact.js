@@ -26,7 +26,7 @@ function Contact ({ contact }) {
             },
             body: JSON.stringify({followup_date: "0"})
         })
-        // update front end contact followup date (use map)
+        // update front end contact followup date (use map) if not id, return
     }
 
     return (
