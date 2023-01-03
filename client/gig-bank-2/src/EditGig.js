@@ -30,7 +30,7 @@ function EditGig() {
 
     return (<div className="content-panel">
                 <label>Event Date:</label>
-                <input type="text" name="date" id="date" value={editGigFormData.date}></input><br />
+                <input type="text" name="date" id="date" value={editGigFormData.date} onChange={(e) => setEditGigFormData({...editGigFormData, date: e.target.value})}></input><br />
                 {/* <DatePicker dateFormat="YYYY-MM-DD" selected={editGigFormData["date"]} onChange={(date) => setEditGigFormData({...editGigFormData, date: date})} /> */}
                 <label>Occasion: </label>
                 <input type="text" name="occasion" id="occasion" value={editGigFormData["occasion"]} onChange={(e) => setEditGigFormData({...editGigFormData, occasion: e.target.value})} ></input><br />
