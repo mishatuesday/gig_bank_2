@@ -9,10 +9,10 @@ function ClientForm({client, setClient, className}) {
         {
             client.id > 0 ?
             <div>
-                <span className="form-title">client</span><br />
+                <div className="form-title">client</div>
                 {client.first_name} {client.last_name}<br />
                 {client.company}<br />
-                {client.phone} {client.email}
+                {client.phone} {client.email}&nbsp;
                 <a href="#" onClick={() => setClient({})}>remove client</a>
             </div>
             :

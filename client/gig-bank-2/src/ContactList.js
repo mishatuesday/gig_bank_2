@@ -14,8 +14,8 @@ function ContactList({loggedIn}) {
 
     // compare function helps sort contact objects by date
     function compare(a, b) {
-        if (a.followup_date > b.followup_date) return 1;
-        if (b.folowup_date > a.followup_date) return -1;
+        if (a.followup_date < b.followup_date) return 1;
+        if (b.folowup_date < a.followup_date) return -1;
         return 0;
     }
 

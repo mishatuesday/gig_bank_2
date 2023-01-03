@@ -34,8 +34,8 @@ function AddClient({setShowAddClient, setClient, className}) {
                 
                 <label>First Name:</label>
                 <input type="text" name="first_name" id="first_name" className="half" value={clientFormData["first_name"]} onChange={(e) => setClientFormData({...clientFormData, first_name: e.target.value})}></input><br />
-                <label>First Name: </label>
-                <input type="text" name="first_name" id="first_name" className="half" value={clientFormData["first_name"]} onChange={(e) => setClientFormData({...clientFormData, first_name: e.target.value})} ></input><br />
+                {/* <label>First Name: </label>
+                <input type="text" name="first_name" id="first_name" className="half" value={clientFormData["first_name"]} onChange={(e) => setClientFormData({...clientFormData, first_name: e.target.value})} ></input><br /> */}
                 <label>Last Name: </label>
                 <input type="text" name="last_name" id="last_name" className="half" value={clientFormData["last_name"]} onChange={(e) => setClientFormData({...clientFormData, last_name: e.target.value})} ></input><br />
                 <label>Company: </label>

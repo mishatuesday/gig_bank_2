@@ -7,6 +7,7 @@ function AddContact({gig_id, showAdd, client_id, setShowAdd}) {
     const [contactFormData, setContactFormData] = useState([])
 
     function submitContact() {
+        // if contactFormData.followup_date !== valid date, set to 0
         const newContact = {...contactFormData, gig_id: gig_id, client_id: client_id}
         fetch(contactUrl, {
             method: "POST",

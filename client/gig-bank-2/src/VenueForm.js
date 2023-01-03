@@ -9,7 +9,9 @@ function VenueForm({venue, setVenue}) {
         {
             venue.id > 0 ?
             <div>
-                venue<br />
+                <div className="form-title">
+                venue
+                </div>
                 {venue.name}<br />
                 {venue.street}<br />
                 {venue.city}, {venue.state} {venue.zip_code}<br />

@@ -38,6 +38,10 @@ td {
   padding: 5px;
 }
 
+textarea {
+  font-family: sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -115,6 +119,10 @@ td {
 
 .day {
   font-size: 24px;
+}
+
+.contact-day {
+  font-size: 12px;
 }
 
 .form-title {
@@ -207,6 +215,10 @@ td {
 
 .month {
   font-size: 18px;
+}
+
+.contact-month {
+  font-size: 9px;
 }
 
 .user-email {

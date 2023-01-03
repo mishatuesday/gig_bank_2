@@ -30,17 +30,17 @@ function Contact ({ contact }) {
 
     return (
                 <tr>
-                    <td className="calendar-2"><span className="month">{monthName}</span><br />
-                    <span className="day">{day}</span></td>
+                    <td className="calendar-2"><span className="contact-month">{monthName}</span><br />
+                    <span className="contact-day">{day}</span></td>
                     <td>{contact.method}</td>
                     <td className="gig-row" onClick={() => navigate(`/gig/${contact.gig_id}`)}>
-                        <span>{contact.notes.slice(0,40)}...</span>
+                        <span>{contact.notes ? contact.notes.slice(0,40) : null}...</span>
                     </td>
                     <td>
-                        {contact.followup_date === "0" ? " " : <button onClick={() => markComplete()}>mark complete</button>}
+                        {contact.followup_date == "0" ? " " : <button onClick={() => markComplete()}>mark complete</button>}
                     </td>
                     <td>
-                        {contact.followup_date > "0" ? contact.followup_date.substr(0,10) : null}
+                        {contact.followup_date > "0" ? `due: ${contact.followup_date.substr(5,5)}` : null}
                     </td>
                 </tr>
     )
