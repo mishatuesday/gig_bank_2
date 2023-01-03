@@ -5,7 +5,8 @@ class ContactsController < ApplicationController
     end
     def update
         contact = Contact.find(params[:id])
-        render json: contact.update(followup_date: params[:followup_date]), status: :ok
+        updated_contact = contact.update(followup_date: params[:followup_date])
+        render json: updated_contact, status: :ok
     end
     
     def index_for_user

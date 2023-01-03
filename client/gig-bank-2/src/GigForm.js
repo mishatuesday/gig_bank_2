@@ -29,7 +29,7 @@ function GigForm ({client_id, venue_id, setClient}) {
     return (
             <>
             <label>Event Date:</label>
-            <DatePicker selected={formData["date"]} onChange={(date) => setFormData({...formData, date: date})} />
+            <DatePicker dateFormat="yyyy-MM-dd" selected={formData["date"]} onChange={(date) => setFormData({...formData, date: date})} />
             
             <label>Occasion: </label>
             <input type="text" name="occasion" id="occasion" value={formData["occasion"]} onChange={(e) => setFormData({...formData, occasion: e.target.value})} ></input><br />

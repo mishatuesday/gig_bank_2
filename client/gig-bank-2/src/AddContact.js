@@ -17,6 +17,7 @@ function AddContact({gig_id, showAdd, client_id, setShowAdd}) {
             },
             body: JSON.stringify(newContact)
         })
+        // take response and update contacts simple spread operator
         setShowAdd(false)
     }
 
