@@ -44,6 +44,8 @@ function AddClient({setShowAddClient, setClient, className}) {
                 <input type="text" name="email" id="email" className="half" value={clientFormData["email"]} onChange={(e) => setClientFormData({...clientFormData, email: e.target.value})} ></input><br />
                 <label>Phone: </label>
                 <input type="text" name="phone" id="phone" className="half" value={clientFormData["phone"]} onChange={(e) => setClientFormData({...clientFormData, phone: e.target.value})} ></input><br />
+                {/* <label>Phone: </label>
+                <input type="text" name="phone" id="phone" className="half" value={clientFormData["phone"]} onChange={(e) => setClientFormData({...clientFormData, phone: e.target.value})} ></input><br /> */}
                 <label>Notes: </label>
                 <input type="textarea" name="notes" id="notes" className="half" value={clientFormData["notes"]} onChange={(e) => setClientFormData({...clientFormData, notes: e.target.value})} ></input><br />
                 <button onClick={() => submitClient()}>Save Client</button>
