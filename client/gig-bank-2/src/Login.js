@@ -23,6 +23,9 @@ function Login({toggleLoggedIn}) {
                 localStorage.id = r.id
             } else {
                 localStorage.error = "invalid email/password combination"
+                setTimeout(() => {
+                    localStorage.removeItem("error")
+                }, "5000")
             }
             setFormData({email: "", password: ""})
             toggleLoggedIn()
@@ -32,7 +35,7 @@ function Login({toggleLoggedIn}) {
 
     return(
         <div>
-                <b><small>{localStorage.error ? localStorage.error : null}</small></b><br />
+                <span className="error">{localStorage.error ? localStorage.error : null}</span><br />
                 <input icon='users' iconPosition='left' placeholder='username' type='text' name='email' id='email' value={formData["email"]} onChange={(e) => setFormData({...formData, email: e.target.value})}></input><br />
                 <input icon='lock' iconPosition='left' placeholder='password' type="password" name="password" id="password" value={formData["password"]} onChange={(e) => setFormData({...formData, password: e.target.value})}></input><br />
             <button icon labelPosition='right' onClick={() => onLogin()}>
