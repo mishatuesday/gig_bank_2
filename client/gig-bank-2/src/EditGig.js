@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 const gigUrl = 'http://localhost:3000/gigs/'
 
 function EditGig() {
+    const navigate = useNavigate()
     const [editGigFormData, setEditGigFormData] = useState([])
     const {id} = useParams()
     console.log(id)
@@ -14,15 +15,23 @@ function EditGig() {
         .then(setEditGigFormData)
     }, [])
 
-
     function updateGig() {
-        console.log("hi from updateGig()")
+        fetch(`${gigUrl}${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(editGigFormData)
+        }
+        )
+        .then(navigate("/calendar"))
     }
 
     return (<div className="content-panel">
                 <label>Event Date:</label>
                 <input type="text" name="date" id="date" value={editGigFormData.date}></input><br />
-                <DatePicker dateFormat="YYYY-MM-DD" selected={editGigFormData["date"]} onChange={(date) => setEditGigFormData({...editGigFormData, date: date})} />
+                {/* <DatePicker dateFormat="YYYY-MM-DD" selected={editGigFormData["date"]} onChange={(date) => setEditGigFormData({...editGigFormData, date: date})} /> */}
                 <label>Occasion: </label>
                 <input type="text" name="occasion" id="occasion" value={editGigFormData["occasion"]} onChange={(e) => setEditGigFormData({...editGigFormData, occasion: e.target.value})} ></input><br />
                 <label>Setup Time: </label>

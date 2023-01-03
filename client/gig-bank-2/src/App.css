@@ -124,6 +124,13 @@ textarea {
 .contact-day {
   font-size: 12px;
 }
+.edit-gig-button {
+  background-color: white;
+}
+
+.edit-gig-button:hover {
+  background-color: white;
+}
 
 .form-title {
   color: white;
