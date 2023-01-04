@@ -31,7 +31,7 @@ function App() {
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/to-do" element={<ContactList contacts={contacts} setContacts={setContacts} />} />
       <Route path="/add-gig" element={<AddGig client={client} setClient={setClient} />} />
-      <Route path="/add-client" element={<AddClient setClient={setClient} className={"content-panel"} />} />
+      <Route path="/add-client" element={<AddClient setClient={setClient} className={"content-panel"} standAlone={true} />} />
       <Route path="/gig/:id" element={<ShowGig contacts={contacts} setContacts={setContacts} />} />
       <Route path="/edit-gig/:id" element={<EditGig />} />
       <Route path="/clients" element={<ClientList setClient={setClient} />} />

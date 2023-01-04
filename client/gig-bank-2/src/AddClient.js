@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-function AddClient({setShowAddClient, setClient, className}) {
+function AddClient({setShowAddClient, setClient, className, standAlone}) {
+    const navigate = useNavigate()
     const clientUrl = "http://localhost:3000/clients"
     const [clientFormData, setClientFormData] = useState([])
 
@@ -19,7 +21,12 @@ function AddClient({setShowAddClient, setClient, className}) {
         .then(res => res.json())
         .then(setClient)
         
-        setShowAddClient(false)
+        
+        if (standAlone) {
+            navigate("/clients")
+        } else {
+            setShowAddClient(false)
+        }
     }
 
     let modalClass = "none"
@@ -49,7 +56,7 @@ function AddClient({setShowAddClient, setClient, className}) {
                 <label>Notes: </label>
                 <input type="textarea" name="notes" id="notes" className="half" value={clientFormData["notes"]} onChange={(e) => setClientFormData({...clientFormData, notes: e.target.value})} ></input><br />
                 <button onClick={() => submitClient()}>Save Client</button>
-                <button onClick={() => setShowAddClient(false)}>cancel</button>
+                {standAlone ? null : <button onClick={() => setShowAddClient(false)}>cancel</button>}
                 
             </div>
         </div>

@@ -41,18 +41,18 @@ function ShowGig({contacts, setContacts}) {
     return (
         <div className="content-panel">
             <div className="workorder-title">
-                {thisGig.date.substr(0,10)} @ {thisGig.service_time}<br />
+                {thisGig.date.substr(5,5)}-{thisGig.date.substr(0,4)} @ {thisGig.service_time}<br />
                 {thisGig.occasion}&nbsp;
                 {thisGig.venue ? 
                 `in ${thisGig.venue.city}, ${thisGig.venue.state}`
                 : <span> *needs venue*</span>}
                 </div>
                 <div>
-                <br />client:<br />
+                <br /><span className="form-title">client:</span><br />
                 {thisGig.client.first_name} {thisGig.client.last_name} {thisGig.client.phone}
                 </div>
                 <div>
-                <br />venue:<br />
+                <br /><span className="form-title">venue:</span><br />
                 {showVenue()}<br /><br />
                 </div>
                 <div>
@@ -61,7 +61,7 @@ function ShowGig({contacts, setContacts}) {
                 </div>
                 <div>
                     Service Notes:<br />
-                    {thisGig.services}
+                    {thisGig.services}<br />&nbsp;
                 </div>
                 <div className="form-title">
                     contacts with client:

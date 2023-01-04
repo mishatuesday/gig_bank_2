@@ -12,6 +12,10 @@ a.menu-item {
   padding: 1px;
 }
 
+body {
+  font-size: 12px;
+}
+
 button {
   color: white;
   background-color: #069;
