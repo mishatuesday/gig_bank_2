@@ -18,7 +18,7 @@ function LoginStatus({toggleLoggedIn}) {
         
         <>
             <div className="user-email">
-                logged in as <br />{localStorage.email}<br />
+                logged in as <br />{localStorage.email}&nbsp;
             <button labelPosition='right' onClick={() => logout()}>
                 Logout
             </button>

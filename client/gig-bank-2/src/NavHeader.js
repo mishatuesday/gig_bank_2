@@ -6,34 +6,33 @@ function NavHeader () {
     return (
         <div className='header-align'>
         <div>
-        <Header textAlign='center' as='h2'>
-        <Header.Content >
+        
             GigBank 2.0
-            <Header.Subheader>Track Gigs and Make Bank</Header.Subheader>
-        </Header.Content>
-        </Header>
+            
 
             {/* conditional start here */}
             {localStorage.email ?
             <>
             <NavLink className="menu-item" to={`/calendar`}>
-            Calendar
+            CALENDAR
             </NavLink>
             <NavLink className="menu-item" to={`/to-do`}>
-            To&nbsp;Do
+            TO&nbsp;DO
             </NavLink> 
             
             <NavLink className="menu-item" to={`/add-gig`}>
-            Add&nbsp;Gig
+            ADD&nbsp;GIG
             </NavLink>
             <NavLink className="menu-item" to={`/clients`}>
-            Clients
+            CLIENTS
             </NavLink>
             {/* <NavLink className="menu-item" to={`/invoices`}>
             Invoices
-            </NavLink> */}
+        </NavLink> */}
             </>
-            :null}
+            :
+            <span><br />Track Gigs and Make Bank!</span>
+            }
             </div>
         </div>
     )

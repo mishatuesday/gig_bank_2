@@ -42,9 +42,10 @@ function Splash() {
         </div>
         
         :
-        <div>
+        <div className="splash">
             <img src={require("./assets/gigbank-splashy.png")} alt="a musician and a magician with money raining down on them" /><br />
-            Welcome to GigBank! Log in or <a href="#" onClick={() => setShowCreate(true)} >Sign Up!</a>
+            Welcome to GigBank! <br />
+            Where freelance event entertainers keep track of gigs, leads, and client contacts.<br />Log in or <a href="#" onClick={() => setShowCreate(true)} >Sign Up!</a>
         </div>
         }
         </div>

@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import AddClient from './AddClient'
 
 function ClientForm({client, setClient, className}) {
+    const navigate = useNavigate()
     const [showAddClient, setShowAddClient] = useState(false)
 
     return (
-        <>
+        <><br />
         {
             client.id > 0 ?
             <div>
@@ -23,10 +25,11 @@ function ClientForm({client, setClient, className}) {
                 showAddClient ?
                 <AddClient setShowAddClient={setShowAddClient} setClient={setClient} className={className} />
                 :
-                <a href="#" onClick={() => setShowAddClient(true)}>Add Client</a>
+                <div><button onClick={() => setShowAddClient(true)}>Add Client</button> or <button onClick={() => navigate("/clients")} >Search Clients</button> [required]</div>
             }
             </>
         }
+        <br />
         <hr />
         </>
     )

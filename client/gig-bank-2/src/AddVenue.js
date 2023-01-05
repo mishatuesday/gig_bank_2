@@ -38,7 +38,7 @@ function AddVenue({setShowAddVenue, setVenue}) {
                 <label>Phone: </label>
                 <input type="text" name="phone" id="phone" className="half" value={venueFormData["phone"]} onChange={(e) => setVenueFormData({...venueFormData, phone: e.target.value})} ></input><br />        
                 <button onClick={() => submitVenue()}>Save Venue</button>
-                <a href="#" onClick={() => setShowAddVenue(false)}>cancel</a>
+                <button onClick={() => setShowAddVenue(false)}>cancel</button>
             </div>
         </div>
     )

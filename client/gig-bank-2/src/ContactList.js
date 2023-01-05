@@ -24,7 +24,7 @@ function ContactList({loggedIn, contacts, setContacts}) {
             <h1>To Do</h1>
             <table>
                 <tbody>
-                {contacts.length > 0 ? contacts.sort(compare).map(contact => <Contact key={contact.id} contact={contact} contacts={contacts} setContacts={setContacts} />) : "looks like you're all caught up!"}
+                {contacts.length > 0 ? contacts.sort(compare).map(contact => <Contact key={contact.id} contact={contact} contacts={contacts} setContacts={setContacts} />) : "this will show contacts that have followup dates assigned"}
                 </tbody>
             </table>
         </div>

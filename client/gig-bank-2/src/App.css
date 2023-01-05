@@ -1,25 +1,29 @@
 
 
 a.menu-item {
+  font-size: 15px;;
   display: inline-block;
-  background-color: #3ac;
+  background-color: rgba(100,100,100,0.5);
   color: white;
   text-decoration: none;
   border-style: solid;
   border-width: 1px;
   border-color: black;
   margin: 5px;
-  padding: 1px;
+  padding: 5px;
 }
 
 body {
   font-size: 12px;
+  font-family: Helvetica, sans-serif;
+  background-color: gray;
 }
 
 button {
   color: white;
-  background-color: #069;
-  border: none;
+  background-color: #444;
+  border: solid;
+  border-color: white;
   display: inline-flex;
   height: 14px;
   font-size: 9px;
@@ -42,9 +46,9 @@ td {
   padding: 5px;
 }
 
-textarea {
+/* textarea {
   font-family: sans-serif;
-}
+} */
 
 .App {
   text-align: center;
@@ -85,7 +89,7 @@ textarea {
 }
 
 .calendar {
-  background-color: #3ac;
+  background-color: #046307;
   color: white;
   padding: 5px;
   text-align: center;
@@ -93,7 +97,7 @@ textarea {
 }
 
 .calendar-2 {
-  background-color: #0a6;
+  background-color: #046307;
   color: white;
   padding: 5px;
 }
@@ -109,16 +113,17 @@ textarea {
 }
 
 .client:hover {
-  background-color: #3fc
+  background-color: #f6de90
 }
 
 .content-panel {
+  background-color: white;
   display: block;
   position: relative;
   clear: both;
   margin: auto;
   width: 60%;
-  padding-top: 50px;
+  padding: 50px;
 }
 
 .contact-day {
@@ -149,23 +154,28 @@ textarea {
   color: white;
   font-size: 12px;
   font-weight: bold;
-  background-color: #3ac;
+  background-color: #046307;
   padding: 3px;
 }
 
 .gig-row:hover {
-  background-color: #dfe;
+  background-color: #f6de90;
 }
 
 .blurf {
   background-image: url('./assets/gold-coins.png');
-  background-color: black;
+  background-color: #699;
   display: flex;
+  margin: auto;
+  width: 60%;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .header-align {
   color: white;
   font-size: 18px;
+  /* background-color: rgba(0,0,0,0.2); */
   text-shadow: -1px 1px 0 #000,
 				      1px 1px 0 #000,
 				      1px -1px 0 #000;
@@ -241,6 +251,10 @@ textarea {
 .contact-month {
   font-size: 9px;
 }
+
+/* .splash {
+  background-color: #666;
+} */
 
 .user-email {
   color: white;
