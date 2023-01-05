@@ -1,7 +1,7 @@
 
 
 a.menu-item {
-  font-size: 15px;;
+  font-size: 12px;;
   display: inline-block;
   background-color: rgba(100,100,100,0.5);
   color: white;
@@ -10,7 +10,7 @@ a.menu-item {
   border-width: 1px;
   border-color: black;
   margin: 5px;
-  padding: 5px;
+  padding: 3px;
 }
 
 body {
@@ -260,6 +260,7 @@ td {
   color: white;
   padding: 15px;
   background-color: rgba(0,0,0,0.4);
+  display: block;
 }
 
 .workorder-title {
