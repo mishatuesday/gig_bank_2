@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    # apply custom error response
     rescue_from ActiveRecord::RecordNotFound, with: :not_found_response
     def create
         render json: User.create(user_params), status: :ok
